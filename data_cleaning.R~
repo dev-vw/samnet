@@ -1,0 +1,15 @@
+# import the statnet library
+library(foreign)
+library(tidyverse)
+library(statnet)
+require(foreign)
+
+# sets the current working directory
+setwd("/Users/vaniawang/Google Drive/grad school/PhD UCSB/projects/msm_seattle/raw data/")
+
+# importing the .csv file and converting it to a tibble
+msmdata <- as.tibble(read.dta('msm_data.dta'))
+
+# extracting the number of NAs for all variables
+numNAs <- summarise_all(msmdata, sum(is.na(.)))
+
