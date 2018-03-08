@@ -1,0 +1,4 @@
+wd = getwd()
+setwd(wd)
+
+msmdata <- read.csv('')
