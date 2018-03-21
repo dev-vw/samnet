@@ -87,7 +87,18 @@ ui <- fluidPage(headerPanel("S  A  M  N  E  T"),
                         tags$li("sexual partnerships can happen between males and females"),
                         tags$li("sexual partnerships cannot happen between females and females")),
                 br(),
-                                
+
+                h3("ERGM model results"),
+                h4("The parsimonious model"),
+                mainPanel(img(src = "ergm1.png", height = 240, width = 800)),
+                br(),
+                h4("Let's consider sexual ties"),
+                mainPanel(img(src = "ergm2.png", height = 240, width = 800)),
+                br(),
+                h4("Let's consider sexual ties and HIV status"),
+                mainPanel(img(src = "ergm3.png", height = 240, width = 800)),
+                br(),
+                
                 h3("A tale of three sexual network visualizations"),
                 sidebarLayout(
                     sidebarPanel(
@@ -105,7 +116,7 @@ ui <- fluidPage(headerPanel("S  A  M  N  E  T"),
                                      forceNetworkOutput("force3"))))
                 ),
                 br(),
-
+                
                 h2("V. Structural equation modeling"),
                 h3("How do we measure social support? Or discrimination?"),
                 h3("Constructing the SEM"),
